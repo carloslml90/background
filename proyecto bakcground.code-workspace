@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"name": "proyecto bakcground",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "proyecto bakcground",
+		"liveServer.settings.port": 5501
+	}
+}
