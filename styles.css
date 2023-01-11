@@ -1,29 +1,33 @@
 
-html {height: 100%;  }
+html {height: 100%; position: relative; }
 
-body {margin: 0 !important; text-decoration: none;  height: 100%; }
+body {margin: 0 !important; text-decoration: none;  height: 100%; display: flex; flex-wrap: wrap; }
 /* .main {display: flex; flex-wrap: wrap;} */
 
-* {box-sizing:border-box; outline: red  1px solid; margin: 0; text-decoration: none; list-style: none;}
-body{ height: 100%; display: flex; background-image: url(Gallery/paiclas.jpg); background-size:cover; background-repeat:no-repeat; backdrop-filter: opacity(100%);/* flex-direction: column; */  }
+* {box-sizing:border-box;  margin: 0; text-decoration: none; list-style: none; outline: red solid 2px;}
+body{ height: 100%; display: flex; background-image: url(background/paiclas.jpg); background-size:cover; background-repeat:no-repeat; backdrop-filter: opacity(100%);/* flex-direction: column; */ background-position: center center; background-attachment: fixed; }
 
 
 
 
-#header {width: 100vw; height: 10vh; display: flex; flex-wrap:wrap; justify-content: space-between; background-color: black; align-content: center; }
+#header {width: 100vw; height: auto; display: flex; flex-wrap:wrap; justify-content: space-between; background-color: black; align-content: center; }
 
-li span{font-size:100%; font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: 700; align-items: center; color: blanchedalmond; float: left;}
+.align-nav {display: flex; align-content: center; flex-wrap: wrap;}
+ li span{font-size:2vh; font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: 700;  color: blanchedalmond; float: left; text-align: center; }
 
-nav {width: inherit;}
-ul {width: inherit; height: 10vh;  }
+ nav {width: 100%; }
 
-li {width: calc(100%/4); text-align: center;height:10vh; margin-top: 2.5%;  }
+ span {width: inherit;}
+
+li { text-align: center;height:10vh; margin-top: 2.5%;  width: inherit;}
 
 header li {float: left;}
 
+.main {height: 100%; position: relative;}
 
+.container {width: 100%; height: auto; margin-top: 5%; }
 
-.container {width: 100%; height: 60vh; margin-top: 5%;overflow:scroll; }
+.fila {width: calc(100%/4);}
 
 h1,h2 {text-align: center; font-size: calc(1.5em + 1vh); }
 
@@ -35,8 +39,13 @@ img { height: 30vh; width: 25vw; float: left; margin-left: 10%; margin-right:5% 
 
 .container p {font-family: Verdana, Geneva, Tahoma, sans-serif; font-size:calc(0.5rem + 0.3vh + 0.3vw); text-align: justify; margin: 2% 10% 5% 10%; line-height: 2em; text-indent: 3em; font-weight: 900;}
 
-#footer { display:flex; flex-wrap: wrap; justify-content: center; width: 100%; background-color: black; height: 20%; position: absolute; bottom: 0%; margin-left: 0; align-content: center; }
+#footer { display:flex; flex-wrap: wrap; justify-content: center; width: 100%; background-color: black; height: 20vh; position: relative; bottom: 0; margin-left: 0; align-content: center; }
 
-#footer p {color: white; text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 1.5em; font-weight: 700; }
+#footer p {color: white; text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 2vh; font-weight: 700; }
 
-@media all and (max-width:1000px) { img {height: 20vh; width: 30vw;} ;}
+@media all and (max-width:1000px) and (min-width:500px)  
+{ img {height: 20vh; margin-left: 20%; margin-bottom: 5%} ;}
+
+
+
+@media all and (max-width:500px) {.container p{margin-bottom: 10%;} img{height: 30vh; width: 80vw; margin: 10% 0 10% 10%;} .fila{width: 100%; text-align: center;} span {width: inherit; }}
